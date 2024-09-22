@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meata lang="english"
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product list with cart</title>
+  <link href="assests/css/style.css" rel="stylesheet" />
+  <!-- media css -->
+  <link href="assests/css/media.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <!-- start navbar -->
+    <div class="navbar">
+      <div class="container">
+
+        <div class="logo">
+          <p class="do">Product list with cart</p>
+        </div>
+
+        <ul class="list">
+          <li class="list-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="list-item"><a class="nav-link" href="#">Our Work</a></li>
+          <li class="list-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="list-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+        <div class="icons">
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <a class="button" href="#">Buy Now</a>
+
+      </div>
+    </div>
+    <!-- end navbar -->
+  </header>
+
+  <!-- start main product -->
+
+  <!-- Order Confirmed Modal -->
+  <div id="orderConfirmedmodal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fa fa-check-circle"></i>
+        <h2>Order Confirmed</h2>
+        <p>We hope you enjoy your food!</p>
+      </div>
+      <div class="modal-body">
+        <div id="order-item">
+          <!-- List items will be inserted here by JavaScript -->
+        </div>
+        <div class="modal-total-price">
+          <!-- Total price will be inserted here by JavaScript -->
+        </div>
+        <div class="modal-footer">
+          <button id="startNewOrderBtn" class="new-order-btn" onclick="closeConfirmwindow()">Start New Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- start left div -->
+  <div id="div-left">
+    <h2 class='header-content' > Desserts</h2>
+    <div class="products" id="products">
+    </div>
+  </div>
+  <!-- end left div -->
+
+  <!-- start right div -->
+  <div id="div-right">
+    <div class="cart-container">
+      <h3 class="color-red item-num" >Your cart <span>(0)</span></h3>
+      <div class="background-box cart-items" >
+        <div><img id="myImage" src="assests/imges/empty-cart.png" alt="empty-cart"></div>
+      </div>
+      <p id="empty-text">Your added items will appear here</p>
+    </div>
+  </div>
+  <!-- end right div -->
+  <!-- end main product -->
+
+  
+  <script src="assests/js/main.js"></script>
+</body>
+</html>

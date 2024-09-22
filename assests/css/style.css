@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-color: hsl(30, 30%, 96%);
+}
+
+* {
+  /*font-family:Poppins, sans-serif;*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.navbar .container {
+  width: 80%;
+  margin: auto;
+  display: flex; /* Make div in bellow of navigation bar */
+  justify-content: space-between; /* Used within a flex container (when display: flex; is applied) */
+}
+
+.navbar{
+  transition: 0.4s background-color;/* change background-color gradually*/
+  position: fixed;
+  width: 100%;
+  background-color:white;
+  z-index: 1000; /* Ensures the navbar stays on top */
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+
+
+.logo, .list, .icons, .button {
+  float: left;
+}
+
+.logo {
+  width: 30%;
+  font-weight: bold;
+}
+
+.list {
+  width: 45%;
+}
+
+.icons {
+  width: 5%;
+}
+
+.list li {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.do {
+  color: black;
+  font-size: large;
+}
+
+.button {
+  border: 1px solid white;
+  margin: 10px;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 25px;
+  text-transform: capitalize;
+  background-color: rgb(197, 39, 39);
+}
+
+.logo, .list, .icons {
+  padding-top: 20px;
+}
+
+i {
+  color: rgb(216, 83, 42);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.float-item {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Start main content CSS */
+
+#div-left {
+  width:55%;
+  float: left;
+  margin-top: 20px;
+  margin-right:5%;
+  margin-left:5%;
+  position: relative; /* Position the container relative to its normal position */
+}
+
+#div-right {
+  width:15%;
+  float: right;
+  margin: 70px 10px 5px 5px;
+  background-color:white;
+  height:600px;
+  width:300px;
+  padding-left: 20px ;
+}
+
+.prod {
+  float: left;
+  width: 30%;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+img {
+  width: 70%;
+  border-radius: 5%;
+}
+
+div h2 {
+  margin-left: 10px;
+  font-size: 40px;
+  margin-top:60px;
+}
+
+.red {
+  color: red;
+}
+
+/* CSS for right div */
+
+.background-box {
+  background-size: 40%; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image within the element */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%; /* Set the desired width */
+  height: 100px; /* Set the desired height */
+  margin: 0 auto 35px; /* Center the image and add bottom margin */
+}
+
+.background-box img{
+  margin-left:10px;
+  padding-left:60px;
+}
+
+.color-red {
+  color: rgb(189, 12, 12);
+  font-weight: bold;
+  padding: 30px;
+  text-transform: capitalize;
+  font-size: large;
+}
+
+.cart-container p {
+  color: rgb(68, 14, 14);
+  font-size: 12px;
+  text-align:center;
+  margin-top:20px;
+  width:200px;
+
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.image-container img:hover {
+  transform: scale(1.1); /* Scale the image to 110% */
+}
+
+.add-to-cart {
+  position: absolute;
+  bottom: -10px;
+  left: 50%; /* To position in the middle */
+  transform: translateX(-50%); /* Center the button */
+  background-color: white;
+  color: black;
+  padding: 10px 6px;
+  border-radius: 40px;
+  border-color: brown;
+  border-width: 1px;
+}
+
+.add-to-cart:hover{
+  background-color:rgb(186, 177, 177);
+}
+
+.add-to-cart i {
+  margin-right:3px; /* Adds space between the icon and the text */
+}
+
+.brown-color {
+  color: brown;
+}
+
+/* Button to trigger modal */
+.confirm-order{
+  background-color: #820b07;
+  color:white;
+  padding:10px 60px;
+  border-radius: 60px;
+  margin: 20px 20px;
+
+}
+
+/*confirm model window */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.modal-header i {
+  display: block;
+  font-size: 2rem;
+  color: green;
+  margin-right: 10px;
+}
+.modal-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+.new-order-btn {
+  background-color: #df4230;
+  color: white;
+  border: none;
+  padding: 10px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 60px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+}
+
+.modal-header p {
+  margin: 10px 0 0; /* Margin at the top to separate from h2, no bottom margin */
+  font-size: 16px;
+  color: #666;
+  text-align: center; /* Center-align the text */
+}
+
+.modal-total-price {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the ends of the container */
+  font-size: 18px; /* Adjust the font size as needed */
+  padding: 10px 0; /* Optional padding for spacing */
+}
